@@ -1,0 +1,54 @@
+.main-chat
+  .group-info
+    .group-info__left-box
+      test
+      .group-info__left-box__member-list
+        member : masa
+    = link_to "#" do
+      .group-info__edit-btn
+        Edit
+
+  .message-list
+    .message
+      .message__upper-info
+        .message__upper-info__user-name
+          masa
+        .message__upper-info__date
+          2020/3/31(Tue) 18:32
+      %p.message__text
+        sakura
+    .message
+      .message__upper-info
+        .message__upper-info__user-name
+          masa2
+        .message__upper-info__date
+          2020/3/31(Tue) 19:00
+      %p.message__text
+        pink
+
+  .message-form
+    %form.new-message
+      .input-box
+        %input.input-box__text{placeholder: "type a message", type: "text"}
+        %label.input-box__image
+          = icon('fas', 'image')
+          %input.input-box__image__file{type: "file"}
+      %input.submit-btn{type: "submit"}
+
+-# %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
+
+  -# .chat-side
+  -# .side-bar
+  -#   .side-bar__box
+  -#     %p.side-bar__box__user-name masa
+  -#     %ul.side-bar__box__menu
+  -#       %li.side-bar__box__menu__new-group<
+  -#         = link_to "#" do
+  -#           = icon('fa', 'edit')
+  -#       %li.side-bar__box__menu__edit-user<
+  -#         = link_to "#" do
+  -#           = icon('fa', 'cog')
+  -# .group-list
+  -#   = link_to "#", class:"group" do
+  -#     %p.group__group-name test
+  -#     %p.group__latest-message まだメッセージがありません
