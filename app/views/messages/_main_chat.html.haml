@@ -1,36 +1,50 @@
-.main-chat
-  .group-info
-    .group-info__left-box
-      test
-      .group-info__left-box__member-list
-        member : masa
-    = link_to "#" do
-      .group-info__edit-btn
-        Edit
+-# .messages
+-#   = render @messages
 
-  .message-list
-    .message
-      .message__upper-info
-        .message__upper-info__user-name
-          masa
-        .message__upper-info__date
-          2020/3/31(Tue) 18:32
-      %p.message__text
-        sakura
-    .message
-      .message__upper-info
-        .message__upper-info__user-name
-          masa2
-        .message__upper-info__date
-          2020/3/31(Tue) 19:00
-      %p.message__text
-        pink
+-# .main-chat
+-#   .group-info
+-#     .group-info__left-box
+-#       test
+-#       .group-info__left-box__member-list
+-#         member : masa
+-#     = link_to "#" do
+-#       .group-info__edit-btn
+-#         Edit
 
-  .message-form
-    %form.new-message
-      .input-box
-        %input.input-box__text{placeholder: "type a message", type: "text"}
-        %label.input-box__image
-          = icon('fas', 'image')
-          %input.input-box__image__file{type: "file"}
-      %input.submit-btn{type: "submit"}
+-#   .message-list
+-#     .message
+-#       .message__upper-info
+-#         .message__upper-info__user-name
+-#           masa
+-#         .message__upper-info__date
+-#           2020/3/31(Tue) 18:32
+-#       %p.message__text
+-#         sakura
+-#     .message
+-#       .message__upper-info
+-#         .message__upper-info__user-name
+-#           masa2
+-#         .message__upper-info__date
+-#           2020/3/31(Tue) 19:00
+-#       %p.message__text
+-#         pink
+
+-#   .message-form
+-#     .form
+-#       = form_for [@group, @message] do |f|
+-#         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+-#       .form__mask
+-#           = f.label :image, class: 'form__mask__image' do
+-#             = icon('fas', 'image', class: 'icon')
+-#             = f.file_field :image, class: 'hidden'
+-#         = f.submit 'Send', class: 'form__submit'
+
+ 
+  -# .message-form
+  -#   %form.new-message
+  -#     .input-box
+  -#       %input.input-box__text{placeholder: "type a message", type: "text"}
+  -#       %label.input-box__image
+  -#         = icon('fas', 'image')
+  -#         %input.input-box__image__file{type: "file"}
+  -#     %input.submit-btn{type: "submit"}
