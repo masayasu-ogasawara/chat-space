@@ -18,3 +18,8 @@
 
 public/uploads/*
 public/uploads/*
+config/secrets.yml
+
+
+deploytest.pem
+13.113.60.117
